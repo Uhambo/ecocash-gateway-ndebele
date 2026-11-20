@@ -43,6 +43,8 @@ Merchant's app ──API key──▶ Gateway ──merchant's own EcoCash crede
 
 ## Quick start
 
+> Working on this code? Read [CONTRIBUTING.md](CONTRIBUTING.md) first. It's short, it's rude, it's for your own good.
+
 ```bash
 pip install -r requirements.txt
 ```
