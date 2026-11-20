@@ -1,38 +1,55 @@
 # Contributing (a.k.a. The Rules, Read Them, I'm Not Joking)
 
-Welcome. You have **write access** to a **payment gateway**. Software that moves people's money.
-Let that sink in. Take a breath. Maybe drink some water. Now read every word below, because
+Welcome. 
+
+You have **write access** to a **payment gateway**. Software that moves people's money.
+LET THAT SINK PHAKATHI.
+
+Take a breath.
+
+Smoke a cig. 
+
+Maybe water. 
+
+Now read every word below, because
 "I didn't know" stopped being an excuse the moment you opened this file.
 
 ## The Ten Commandments
 
-1. **Thou shalt not commit `.env`.** It's in `.gitignore`. If you `git add -f .env`, you will be
-   forced to explain yourself in front of everyone, slowly, with diagrams.
+1. **Thou shalt not commit `.env`.** It's in `.gitignore`. If you `git add -f .env`, you will be forced to send mem $2. 
+
 2. **Thou shalt not commit real phone numbers.** Not yours, not the client's, not your cousin's
-   "just for testing". Use `263770000000`. It belongs to nobody. That is its entire job.
+   "just for testing". Use `263770000000` or your own, sometimes zvoramba.
+
 3. **Thou shalt not commit real EcoCash references** (`MP...`, `CI...`) from sandbox runs. Logs are
    gitignored for a reason. Do not "just paste one into a test real quick".
-4. **Thou shalt not push to `main` with failing tests.** Run them. They take 10 seconds. You've spent
-   longer choosing a playlist.
+
+4. **Thou shalt not push to `main` with failing tests.** Run them. They take 10 seconds. You've spent longer con the hub.
+
 5. **Thou shalt not log secrets.** No `print(creds)`. No `print(request.json())` "for debugging".
-   Debug in your head like an adult, or log the *type* of the thing, never the thing.
+   Debug in your head and chatbot like an adult, or log the *type* of the thing, never the thing.
+
 6. **Thou shalt not touch money logic without a test that proves it.** Charges, refunds, payouts,
    idempotency, limits. New behaviour = new test. No test = no merge. No exceptions. No, not even you.
+
 7. **Thou shalt not trust EcoCash callbacks.** The gateway asks EcoCash for the real status. If you
    "simplify" that by trusting the callback body, someone will forge a callback and get free stuff,
-   and it will be your name on the `git blame`.
+   and it will be your name on the `git blame` more like 'get blamed' it actually is.
+
 8. **Thou shalt not retry a payout blindly.** If EcoCash times out, the payout may have gone through.
    We look it up. We do not send the money again "to be safe". Sending money twice is not safe.
-   It is the opposite of safe. It is generous, at the client's expense.
-9. **Thou shalt not weaken a security check to make a test pass.** Fix the test, or fix your code.
-   The check stays. The check always stays.
+   It is the opposite of safe. It is generous, at the client's expense. Actually astshiyane lakho. No sending money until we have received a good amount of unfailed trannies
+
+9. **Thou shalt not weaken a security check to make a test pass.** Fix the test, or fix your code. Looking at you 'Artificial intelligence' ,mmmm.
+
 10. **Thou shalt not rename `GATEWAY_KEY_PEPPER`, rotate it, or "clean it up".** Doing so kills every
-    merchant's API key at once. You will hear about it. Everyone will hear about it.
+    merchant's API key at once. You will hear about it. Everyone will hear about it, ill tell them its you, never me.
 
 ## Setting up
 
 Do the `.env` section of the [README](README.md#setting-up-your-env-read-this-or-suffer).
-All of it. In order. Then come back. We'll wait.
+
+All of it. In order. Then come back. Obviously.
 
 ```bash
 python -m venv venv
@@ -41,8 +58,6 @@ python -m venv venv
 ```bash
 venv/Scripts/python.exe -m pip install -r requirements.txt
 ```
-
-(On Mac/Linux it's `venv/bin/python`. You knew that. Probably.)
 
 ## How to make a change
 
@@ -87,13 +102,19 @@ venv/Scripts/python.exe -m pip install -r requirements.txt
 
 ## If you leaked a secret
 
-Don't panic. Okay, panic a little. Then:
+Don't panic. Okay, panic a little. 
 
-1. **Tell the repo owner immediately.** Not tomorrow. Not after lunch. Now.
+Then:
+
+1. **Figure it out** Not tomorrow. Not after lunch. Now.
 2. **Rotate the secret** (new EcoCash credentials from the portal, new keys from
-   `python -m gateway.keygen`). Deleting the commit does **not** un-leak it. GitHub remembers.
-   Bots remember. Bots never forget.
-3. Then we fix the history together, calmly, and nobody brings it up at Christmas. Much.
+   `python -m gateway.keygen`). 
+
+	Deleting the commit does **not** un-leak it. GitHub remembers.
+   
+	Bots remember. 						Bots never forget.
+
+3. Then we fix the history, by yourself, calmly, and nobody brings it up at Christmas. Much.
 
 ## Where things live
 
@@ -106,3 +127,6 @@ Don't panic. Okay, panic a little. Then:
 | `tests/` | The thing that stops you from embarrassing yourself | Add to it freely. Delete from it never. |
 
 Questions? Ask. Asking is free. Fixing a double payout at 2am is not.
+
+
+Also this is purely vibe coded, dont believe anything i say

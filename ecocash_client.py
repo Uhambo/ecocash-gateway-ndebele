@@ -157,4 +157,4 @@ if __name__ == "__main__":
             attempt += 1
             
         if attempt > max_attempts:
-            print("\n❌ Stopped polling. Transaction took too long (still pending).")
+            print("\n❌ Thethis' khatheside(still pending).")
