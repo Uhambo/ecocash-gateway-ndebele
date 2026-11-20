@@ -1,0 +1,18 @@
+.env
+venv/
+__pycache__/
+
+# Code only: heavy media (3D models, video, design files, binaries) is uploaded separately (2026-10-18).
+# Small images the code imports (logos, app icons) stay in git.
+*.mp4
+*.mov
+*.glb
+*.gltf
+*.splat
+*.psd
+*.ai
+*.exe
+*.dll
+*.log
+*.db
+.pytest_cache/
